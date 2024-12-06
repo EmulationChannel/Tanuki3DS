@@ -16,7 +16,7 @@ jobs:
       run: make USER=1
     - uses: actions/upload-artifact@v4
       with:
-        name: Tanuki3DS-linux
+        name: Tanuki3DS-linux,windows
         path: ./ctremu
         
   macos-build:
