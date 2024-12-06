@@ -33,7 +33,7 @@ jobs:
         path: ./ctremu
 
     windows-build:
-    runs-on: windows-latest
+      runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
     - name: install dependencies
