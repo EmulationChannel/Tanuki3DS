@@ -31,3 +31,16 @@ jobs:
       with:
         name: Tanuki3DS-macos
         path: ./ctremu
+
+    windows-build:
+    runs-on: windows
+    steps:
+    - uses: actions/checkout@v4
+    - name: install dependencies
+      run: brew install sdl2 glew xxhash xbyak capstone
+    - name: build
+      run: make USER=1
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Tanuki3DS-windows
+        path: ./ctremu 
